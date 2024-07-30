@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.input {
+  width: 98%;
+  margin: 5px 0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.select {
+  margin-top: 10px;
+}
+
+.textarea {
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+  box-sizing: border-box;
+  resize: none;
+}
