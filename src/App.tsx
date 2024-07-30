@@ -1,9 +1,19 @@
 import { useState } from "react";
 import Select from "react-select";
+
 import useGetCountryList from "./hooks/use-get-country-list";
 import useGetPelabuhanList from "./hooks/use-get-pelabuhan-list";
 import useGetBarangList from "./hooks/use-get-barang-list";
+
 import "./App.css";
+import {
+  FormContainer,
+  Header,
+  Input,
+  Label,
+  Section,
+  Textarea,
+} from "./styles/selection-style";
 
 function App() {
   const [countryId, setCountryId] = useState<number | null>(null);
@@ -42,11 +52,11 @@ function App() {
   );
 
   return (
-    <form className="container">
-      <div className="header">Selection Interface</div>
+    <FormContainer>
+      <Header>Test Frontend PT. Aman Tekno Solusi</Header>
 
-      <div className="section">
-        <label className="label">Country</label>
+      <Section>
+        <Label>Negara</Label>
         <Select
           isLoading={isCountryLoading}
           isSearchable
@@ -58,10 +68,10 @@ function App() {
           }}
           className="select"
         />
-      </div>
+      </Section>
 
-      <div className="section">
-        <label className="label">Pelabuhan</label>
+      <Section>
+        <Label>Pelabuhan</Label>
         <Select
           isDisabled={!countryId}
           isLoading={isPelabuhanLoading}
@@ -74,10 +84,10 @@ function App() {
           }}
           className="select"
         />
-      </div>
+      </Section>
 
-      <div className="section">
-        <label className="label">Barang</label>
+      <Section>
+        <Label>Barang</Label>
         <Select
           isDisabled={!selectedPelabuhan}
           isLoading={isBarangLoading}
@@ -89,41 +99,40 @@ function App() {
           }}
           className="select"
         />
-      </div>
+      </Section>
 
-      <div className="section">
-        <label className="label">Deskripsi</label>
-        <textarea
+      <Section>
+        <Label>Deskripsi</Label>
+        <Textarea
           className="textarea"
           value={selectedBarang?.description ?? ""}
-          readOnly
+          disabled
         />
-      </div>
+      </Section>
 
-      <div className="section">
-        <label className="label">Discount</label>
-        <input
+      <Section>
+        <Label>Diskon %</Label>
+        <Input
           className="input"
           type="text"
           value={selectedBarang?.diskon ?? ""}
-          readOnly
+          disabled
         />
-        %
-      </div>
+      </Section>
 
-      <div className="section">
-        <label className="label">Harga</label>
-        <input
+      <Section>
+        <Label>Harga</Label>
+        <Input
           className="input"
           type="text"
           value={selectedBarang?.harga ?? ""}
-          readOnly
+          disabled
         />
-      </div>
+      </Section>
 
-      <div className="section">
-        <label className="label">Total</label>
-        <input
+      <Section>
+        <Label>Total</Label>
+        <Input
           className="input"
           type="text"
           value={
@@ -134,10 +143,10 @@ function App() {
                 ).toLocaleString("id-ID")}`
               : ""
           }
-          readOnly
+          disabled
         />
-      </div>
-    </form>
+      </Section>
+    </FormContainer>
   );
 }
 
