@@ -26,7 +26,7 @@
   $ npm run start
 ```
 
-### ⛏️ Built Using
+## ⛏️ Built Using
 
 - axios
 - react-select
