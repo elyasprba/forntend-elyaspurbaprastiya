@@ -5,13 +5,13 @@
 - Clone this repo
 
 ```
-  $ git clone
+  $ git clone https://github.com/elyasprba/forntend-elyaspurbaprastiya.git
 ```
 
 - Go to folder repo
 
 ```
-  $ cd
+  $ cd frontend-elyaspurbaprastiya
 ```
 
 - Install module
