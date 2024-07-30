@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-## How To Install
+## 📌 How To Install
 
 - Clone this repo
 
@@ -25,5 +25,13 @@
 ```
   $ npm run start
 ```
+
+### ⛏️ Built Using
+
+- axios
+- react-select
+- react-query
+
+<br/>
 
 Happy Hacking & Thanks You.
