@@ -31,6 +31,7 @@
 - axios
 - react-select
 - react-query
+- styled-components
 
 <br/>
 
